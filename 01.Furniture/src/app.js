@@ -1,5 +1,5 @@
-// import { page } from "C:/Users/PC/AppData/Local/Microsoft/TypeScript/4.1/node_modules/page/page.mjs";\
-import { page } from "../node_modules/page/page.mjs";
+// @ts-ignore
+import page from "../node_modules/page/page.mjs";
 // Define the routes    
 
 
