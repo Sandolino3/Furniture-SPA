@@ -1,28 +1,37 @@
 // @ts-ignore
 import page from "../node_modules/page/page.mjs";
 // Define the routes    
+import { catalogView } from "./views/catalogView.js";
+import { detailsView } from "./views/detailsView.js";
+import { createView } from "./views/createView.js";
+import { editView } from "./views/editView.js";
+import { loginView } from "./views/loginView.js";
+import { registerView } from "./views/registerView.js";
+import { myFurnitureView } from "./views/myFurnitureView.js";
 
 
 page('/', () => {
-    console.log('Home Page');
+    catalogView();
 });
-page('/details/:id', () => {
-    console.log('Details Page');
+page('/details/:id', (ctx) => {
+    detailsView(ctx);
 });
 page('/create', () => {
-    console.log('Create Page');
+    createView();
 });
-page('/edit/:id', () => {
-    console.log('Edit Page');
+page('/edit/:id', (ctx) => {
+    editView(ctx);
 });
 page('/login', () => {
-    console.log('Login Page');
+    loginView();
 });
 page('/register', () => {
-    console.log('Register Page');
+    registerView();
 });
 page('/my-furniture', () => {
-    console.log('My Furniture Page');
+    myFurnitureView();
 });
+
+
 // Start the application
 page.start();
